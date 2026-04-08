@@ -36,12 +36,7 @@ import ForgotPassword from "./admin/ForgotPassword";
 import ChangePassword from "./admin/sections/ChangePassword";
 
 function MainLayout() {
-  const { loading } = useContent();
-  
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-  
+  // No loading check - render immediately with cached/default content
   return (
     <>
       <Navbar />

@@ -3,15 +3,32 @@ import defaultContent from "../data/defaultContent";
 import { contentAPI } from "../services/api";
 
 const STORAGE_KEY = "tgi_admin_content";
+const CACHE_EXPIRY_KEY = "tgi_content_cache_expiry";
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 const ContentContext = createContext(null);
 
 export function ContentProvider({ children }) {
-  const [content, setContent] = useState(defaultContent);
-  const [loading, setLoading] = useState(true);
+  // Initialize with cached content immediately (no loading state)
+  const [content, setContent] = useState(() => {
+    try {
+      const cached = localStorage.getItem(STORAGE_KEY);
+      const expiry = localStorage.getItem(CACHE_EXPIRY_KEY);
+      
+      if (cached && expiry && Date.now() < parseInt(expiry)) {
+        const parsedContent = JSON.parse(cached);
+        return deepMerge(defaultContent, parsedContent);
+      }
+    } catch (err) {
+      console.warn('Cache read error:', err);
+    }
+    return defaultContent;
+  });
+  
+  const [loading, setLoading] = useState(false); // Start as false for instant UI
   const [error, setError] = useState(null);
 
-  // Fetch content from backend on mount
+  // Fetch content from backend in background (non-blocking)
   useEffect(() => {
     let isMounted = true;
     
@@ -44,8 +61,9 @@ export function ContentProvider({ children }) {
           }
           
           setContent(mergedContent);
-          // Also save to localStorage as backup
+          // Save to localStorage with expiry
           localStorage.setItem(STORAGE_KEY, JSON.stringify(mergedContent));
+          localStorage.setItem(CACHE_EXPIRY_KEY, (Date.now() + CACHE_DURATION).toString());
         } else {
           // Use localStorage backup if API fails
           const saved = localStorage.getItem(STORAGE_KEY);
@@ -79,6 +97,7 @@ export function ContentProvider({ children }) {
           setContent(defaultContent);
         }
       } finally {
+        // Don't set loading state - UI is already rendered with cached/default content
         if (isMounted) {
           setLoading(false);
         }
