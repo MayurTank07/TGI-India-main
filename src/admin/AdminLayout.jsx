@@ -1,7 +1,7 @@
 import { NavLink, useNavigate, Outlet } from "react-router-dom";
 import {
   LayoutDashboard, Navigation, AlignJustify, Home, Info,
-  MessageSquare, Phone, Briefcase, Users, LogOut, Inbox
+  MessageSquare, Phone, Briefcase, Users, LogOut, Inbox, KeyRound
 } from "lucide-react";
 
 const navItems = [
@@ -15,6 +15,7 @@ const navItems = [
   { label: "Services", path: "/admin/services", icon: Briefcase },
   { label: "Our Clients", path: "/admin/clients", icon: Users },
   { label: "Form Submissions", path: "/admin/submissions", icon: Inbox },
+  { label: "Change Password", path: "/admin/change-password", icon: KeyRound },
 ];
 
 export default function AdminLayout() {

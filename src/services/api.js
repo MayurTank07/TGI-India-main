@@ -73,6 +73,33 @@ export const authAPI = {
       body: JSON.stringify({ currentPassword, newPassword })
     });
     return handleResponse(response);
+  },
+
+  forgotPassword: async (email) => {
+    const response = await fetch(`${API_URL}/auth/forgot-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    return handleResponse(response);
+  },
+
+  verifyOtp: async (email, otp) => {
+    const response = await fetch(`${API_URL}/auth/verify-otp`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, otp })
+    });
+    return handleResponse(response);
+  },
+
+  resetPassword: async (resetToken, newPassword) => {
+    const response = await fetch(`${API_URL}/auth/reset-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ resetToken, newPassword })
+    });
+    return handleResponse(response);
   }
 };
 

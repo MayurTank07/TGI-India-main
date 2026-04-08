@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { authAPI } from "../services/api";
 
 export default function AdminLogin() {
@@ -76,7 +76,13 @@ export default function AdminLogin() {
               required
             />
           </div>
-          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+          <div className="flex justify-end -mt-1">
+            <Link to="/admin/forgot-password" className="text-sm text-purple-600 hover:text-purple-800 font-medium transition">
+              Forgot Password?
+            </Link>
+          </div>
+
+          {error && <p className="text-red-500 text-sm">{error}</p>}
 
           <button
             type="submit"

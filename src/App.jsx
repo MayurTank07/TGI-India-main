@@ -32,6 +32,8 @@ import ContactEditor from "./admin/sections/ContactEditor";
 import ServicesEditor from "./admin/sections/ServicesEditor";
 import ClientsEditor from "./admin/sections/ClientsEditor";
 import SubmissionsViewer from "./admin/sections/SubmissionsViewer";
+import ForgotPassword from "./admin/ForgotPassword";
+import ChangePassword from "./admin/sections/ChangePassword";
 
 function MainLayout() {
   const { loading } = useContent();
@@ -69,6 +71,7 @@ function App() {
         <Routes>
           {/* Admin routes — no Navbar */}
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/forgot-password" element={<ForgotPassword />} />
           <Route
             path="/admin"
             element={
@@ -88,6 +91,7 @@ function App() {
             <Route path="services" element={<ServicesEditor />} />
             <Route path="clients" element={<ClientsEditor />} />
             <Route path="submissions" element={<SubmissionsViewer />} />
+            <Route path="change-password" element={<ChangePassword />} />
           </Route>
 
           {/* Public routes — with Navbar */}
