@@ -23,13 +23,13 @@ const defaultContent = {
     logoSubtext: "Talent Group Of India",
     description:
       "Talent Group of India is a leading HR and recruitment firm dedicated to building careers, powering businesses, and shaping India's workforce.",
-    address: "Bangalore, Karnataka, India - 560001",
-    email: "info@tgindia.com",
+    address: "Mumbai, Maharashtra, India - 400001",
+    email: "info@talentgroupofindia.com",
     phone: "+91 98765 43210",
     socialLinks: {
-      facebook: "#",
-      twitter: "#",
-      instagram: "#",
+      facebook: "https://www.facebook.com/talentgroupofindia",
+      twitter: "https://twitter.com/talentgroupofindia",
+      instagram: "https://www.instagram.com/talentgroupofindia",
     },
     sitemapLinks: ["About", "Services", "Our Clients", "Testimonials", "Contact Us"],
   },
@@ -161,7 +161,7 @@ const defaultContent = {
     journey: {
       heading: "Our journey started with a Vision for India",
       paragraph1:
-        "Founded in 2012 in Bangalore, Talent Group of India set out to bridge the gap between India's vast talent pool and the needs of growing businesses. What began as a small team has since grown into a national leader in recruitment and HR consulting, backed by over a decade of expertise and deep industry relationships.",
+        "Founded in 2012, Talent Group of India set out to bridge the gap between India's vast talent pool and the needs of growing businesses. Headquartered in Mumbai, Maharashtra, what began as a small team has since grown into a national leader in recruitment and HR consulting, backed by over a decade of expertise and deep industry relationships.",
       paragraph2:
         "Today, TG INDIA stands as a trusted bridge for thousands of professionals and hundreds of enterprises across the country. We go beyond titles and job descriptions — we listen to the stories behind every resume and every role, driven by the belief that when the right person finds the right opportunity, the potential for impact is truly limitless.",
       image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
@@ -303,9 +303,9 @@ const defaultContent = {
     heading: "Let's write your success story together",
     subheading:
       "Thousands of businesses across India trust Talent Group Of India for their most critical hiring decisions.",
-    email: "info@tgindia.com",
+    email: "info@talentgroupofindia.com",
     phone: "+91 98765 43210",
-    address: "Bangalore, Karnataka, India - 560001",
+    address: "Mumbai, Maharashtra, India - 400001",
     categoryOptions: ["Student", "Employer", "Job Seeker"],
     cityOptions: ["Mumbai", "Delhi", "Bangalore", "Pune", "Chennai", "Hyderabad"],
   },

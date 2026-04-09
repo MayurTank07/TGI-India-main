@@ -49,7 +49,10 @@ function MainLayout() {
         <Route path="/services/non-it" element={<NonITPage />} />
         <Route path="/services/accounting" element={<AccountingPage />} />
         <Route path="/services/healthcare" element={<HealthcarePage />} />
-        <Route path="/services/corperate" element={<CorperatePage />} />
+        {/* Canonical URL — /services/corporate */}
+        <Route path="/services/corporate" element={<CorperatePage />} />
+        {/* Legacy redirect for old typo URL */}
+        <Route path="/services/corperate" element={<Navigate to="/services/corporate" replace />} />
         <Route path="/our-clients" element={<OurClientPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/contact" element={<ContactUsPage />} />

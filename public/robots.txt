@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block admin section from indexing
+Disallow: /admin/
+Disallow: /admin/*
+
+# Block API endpoints
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.talentgroupofindia.com/sitemap.xml

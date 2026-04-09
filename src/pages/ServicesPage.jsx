@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContent } from "../context/ContentContext";
 import Footer from "../components/Footer/Footer";
+import SEO from "../components/SEO";
 import { 
   Code, 
   Headphones, 
@@ -54,13 +55,32 @@ export default function ServicesPage() {
       title: "Corporate Hiring",
       description: "End-to-end recruitment solutions for corporate teams and leadership positions.",
       icon: Briefcase,
-      path: "/services/corperate",
+      path: "/services/corporate",
       color: "from-indigo-600 to-purple-600"
     }
   ];
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "HR Recruitment & Staffing Services in Mumbai",
+    "url": "https://www.talentgroupofindia.com/services",
+    "itemListElement": services.map((s, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": s.title,
+      "url": `https://www.talentgroupofindia.com${s.path}`
+    }))
+  };
+
   return (
     <>
+      <SEO
+        title="HR Recruitment & Staffing Services in Mumbai | IT, BPO, Finance, Healthcare"
+        description="Explore Talent Group of India's full range of HR recruitment services in Mumbai — IT recruitment, BPO staffing, Non-IT hiring, Accounting, Healthcare, and Corporate executive search."
+        canonical="/services"
+        schema={servicesSchema}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-700 via-purple-700 to-purple-900 py-16 md:py-28 px-5 md:px-6 text-white">
         <div className="max-w-7xl mx-auto text-center">
