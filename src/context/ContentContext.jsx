@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect } from "react";
 import defaultContent from "../data/defaultContent";
 import { contentAPI } from "../services/api";
@@ -79,7 +80,7 @@ export function ContentProvider({ children }) {
       } catch (err) {
         if (!isMounted) return;
         
-        console.warn('Content API not available, using local defaults');
+        console.warn('Content API not available, using local defaults:', err);
         // Fallback to localStorage
         try {
           const saved = localStorage.getItem(STORAGE_KEY);

@@ -23,16 +23,6 @@ const handleResponse = async (response) => {
   }
 };
 
-// Helper function to add timeout to fetch requests
-const fetchWithTimeout = (url, options = {}, timeout = 5000) => {
-  return Promise.race([
-    fetch(url, options),
-    new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('Request timeout')), timeout)
-    )
-  ]);
-};
-
 // Auth API
 export const authAPI = {
   login: async (email, password) => {

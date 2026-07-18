@@ -13,21 +13,22 @@ const corporateSchema = {
   "@type": "Service",
   "name": "Corporate Hiring & Executive Search in Mumbai",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Talent Group of India",
     "url": "https://www.talentgroupofindia.com"
   },
-  "areaServed": { "@type": "City", "name": "Mumbai" },
-  "description": "Executive search and corporate hiring agency in Mumbai. We recruit C-suite executives, directors, senior managers, and leadership talent for top corporations.",
-  "url": "https://www.talentgroupofindia.com/services/corporate"
+  "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
+  "description": "Corporate hiring and executive search support for leadership, management, specialist, and confidential roles.",
+  "url": "https://www.talentgroupofindia.com/services/corporate",
+  "serviceType": ["corporate hiring company", "executive search", "leadership recruitment"]
 };
 
 export default function CorporatePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <SEO
-        title="Corporate Hiring & Executive Search Agency in Mumbai | Leadership Recruitment"
-        description="Mumbai's premier corporate hiring and executive search firm. Talent Group of India recruits C-suite leaders, directors, senior managers, and board-level executives for India's top corporations. Start your search today."
+        title="Corporate Hiring Company in Mumbai"
+        description="Recruit leaders, managers and specialist professionals with corporate hiring and executive search support from Talent Group of India."
         canonical="/services/corporate"
         schema={corporateSchema}
       />

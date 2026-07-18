@@ -12,21 +12,22 @@ const accountingSchema = {
   "@type": "Service",
   "name": "Accounting & Finance Recruitment in Mumbai",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Talent Group of India",
     "url": "https://www.talentgroupofindia.com"
   },
-  "areaServed": { "@type": "City", "name": "Mumbai" },
-  "description": "Specialized accounting and finance recruitment agency in Mumbai. We place CA, CPA, financial analysts, CFOs, auditors, and accounts executives in top companies.",
-  "url": "https://www.talentgroupofindia.com/services/accounting"
+  "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
+  "description": "Accounting and finance recruitment support for chartered accountants, financial analysts, auditors, CFOs, and accounts executives.",
+  "url": "https://www.talentgroupofindia.com/services/accounting",
+  "serviceType": ["finance recruitment company", "accounting recruitment", "CFO hiring", "auditor hiring"]
 };
 
 export default function AccountingPage() {
   return (
     <>
       <SEO
-        title="Accounting & Finance Recruitment Agency in Mumbai | CA, CFO & Analyst Hiring"
-        description="Mumbai's top accounting and finance recruitment agency. Talent Group of India places chartered accountants, financial analysts, CFOs, auditors and accounts executives in leading firms. Fast hiring. Contact us."
+        title="Finance Recruitment Company in Mumbai"
+        description="Hire chartered accountants, financial analysts, CFOs, auditors and accounts executives with Talent Group of India's finance recruitment services."
         canonical="/services/accounting"
         schema={accountingSchema}
       />

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { authAPI } from "../services/api";
 import { ArrowLeft, Mail, KeyRound, ShieldCheck } from "lucide-react";
+import SEO from "../components/SEO";
 
 const STEPS = { EMAIL: 1, OTP: 2, RESET: 3, SUCCESS: 4 };
 
@@ -71,8 +72,10 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#17021d] to-[#3C0060] flex items-center justify-center px-4">
-      <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 w-full max-w-md">
+    <>
+      <SEO title="Admin Password Reset" canonical="/admin/forgot-password" noindex />
+      <div className="min-h-screen bg-gradient-to-br from-[#17021d] to-[#3C0060] flex items-center justify-center px-4">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 w-full max-w-md">
 
         {/* Logo */}
         <div className="flex items-center gap-3 mb-6">
@@ -243,7 +246,8 @@ export default function ForgotPassword() {
         <p className="text-center text-gray-400 text-xs mt-6">
           TGI Admin Panel — Restricted Access
         </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

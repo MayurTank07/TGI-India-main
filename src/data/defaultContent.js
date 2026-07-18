@@ -36,7 +36,7 @@ const defaultContent = {
 
   home: {
     hero: {
-      badge: "India's #1 Recruitment Partner",
+      badge: "India's Trusted Recruitment Partner",
       title: "Building Careers\nPowering Businesses\nShaping India's Workforce",
       description:
         "Finding the right talent shouldn't feel like a gamble. At Talent Group Of India, we connect ambition with opportunity—helping companies hire with confidence and professionals grow with purpose.",

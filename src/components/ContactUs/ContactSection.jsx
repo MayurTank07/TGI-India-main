@@ -38,11 +38,11 @@ export default function ContactSection() {
           <span className="inline-block bg-purple-50 text-purple-700 border border-purple-200 px-5 py-2 rounded-full text-sm font-semibold">
             Contact Us
           </span>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Let's</span> write your
             <br />success story
             <br />together
-          </h2>
+          </h1>
           <p className="text-gray-600 text-base md:text-xl leading-relaxed">{subheading}</p>
         </div>
 

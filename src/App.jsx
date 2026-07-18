@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { ContentProvider, useContent } from "./context/ContentContext";
+import { ContentProvider } from "./context/ContentContext";
 
 import Navbar from "./components/Navbar/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
-import LoadingSpinner from "./components/LoadingSpinner";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -17,6 +16,7 @@ import CorperatePage from "./pages/Services/CorperatePage";
 import OurClientPage from "./pages/OurClientPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 // Admin
 import AdminLogin from "./admin/AdminLogin";
@@ -56,6 +56,7 @@ function MainLayout() {
         <Route path="/our-clients" element={<OurClientPage />} />
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );

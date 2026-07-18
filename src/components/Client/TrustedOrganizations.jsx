@@ -24,11 +24,13 @@ export default function TrustedOrganizations() {
         <div className="grid grid-cols-3 gap-3 md:gap-6">
           {organizations?.map((org, index) => (
             <div key={index} className="bg-white rounded-xl md:rounded-2xl p-4 md:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center">
-              <img
-                src={org.logo}
-                alt={org.name}
-                className="h-8 md:h-12 w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
-              />
+              {org.logo && (
+                <img
+                  src={org.logo}
+                  alt={org.name}
+                  className="h-8 md:h-12 w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              )}
             </div>
           ))}
         </div>

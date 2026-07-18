@@ -16,7 +16,7 @@ export default function Navbar() {
     { label: "Non-IT Recruitment", path: "/services/non-it" },
     { label: "Accounting & Finance", path: "/services/accounting" },
     { label: "Healthcare Staffing", path: "/services/healthcare" },
-    { label: "Corporate Hiring", path: "/services/corperate" }
+    { label: "Corporate Hiring", path: "/services/corporate" }
   ];
 
   return (

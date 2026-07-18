@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useContent } from "../context/ContentContext";
 import Footer from "../components/Footer/Footer";
 import SEO from "../components/SEO";
 import { 
@@ -13,8 +12,6 @@ import {
 } from "lucide-react";
 
 export default function ServicesPage() {
-  const { content } = useContent();
-
   const services = [
     {
       title: "IT Recruitment",
@@ -63,7 +60,7 @@ export default function ServicesPage() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "HR Recruitment & Staffing Services in Mumbai",
+    "name": "Recruitment and Staffing Services in India",
     "url": "https://www.talentgroupofindia.com/services",
     "itemListElement": services.map((s, i) => ({
       "@type": "ListItem",
@@ -76,8 +73,8 @@ export default function ServicesPage() {
   return (
     <>
       <SEO
-        title="HR Recruitment & Staffing Services in Mumbai | IT, BPO, Finance, Healthcare"
-        description="Explore Talent Group of India's full range of HR recruitment services in Mumbai — IT recruitment, BPO staffing, Non-IT hiring, Accounting, Healthcare, and Corporate executive search."
+        title="Recruitment & Staffing Services in India"
+        description="Explore HR recruitment services for IT, BPO, Non-IT, Accounting, Healthcare and Corporate hiring across Mumbai, Bangalore, Gujarat and India."
         canonical="/services"
         schema={servicesSchema}
       />

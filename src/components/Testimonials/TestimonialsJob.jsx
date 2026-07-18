@@ -3,7 +3,7 @@ import { useContent } from "../../context/ContentContext";
 
 export default function TestimonialsJob() {
   const { content } = useContent();
-  const { heading, subheading, item } = content.testimonials.jobSeekers;
+  const { subheading, item } = content.testimonials.jobSeekers;
 
   return (
     <section className="bg-[#EDE4F6] py-16 md:py-28 px-5 md:px-6">

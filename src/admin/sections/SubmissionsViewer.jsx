@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Trash2, Download, RefreshCw, Inbox } from "lucide-react";
 import AdminHeader from "../components/AdminHeader";
 import { submissionAPI } from "../../services/api";
@@ -11,7 +11,7 @@ export default function SubmissionsViewer() {
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  async function load() {
+  const load = useCallback(async () => {
     try {
       setLoading(true);
       const response = await submissionAPI.getAll({ source: filter });
@@ -22,9 +22,9 @@ export default function SubmissionsViewer() {
     } finally {
       setLoading(false);
     }
-  }
+  }, [filter]);
 
-  useEffect(() => { load(); }, [filter]);
+  useEffect(() => { load(); }, [load]);
 
   async function deleteOne(id) {
     try {

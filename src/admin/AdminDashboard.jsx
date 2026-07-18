@@ -68,19 +68,19 @@ export default function AdminDashboard() {
 
       {/* Section Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {sections.map(({ label, desc, path, icon: Icon, color }) => (
+        {sections.map((section) => (
           <Link
-            key={path}
-            to={path}
+            key={section.path}
+            to={section.path}
             className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all group"
           >
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${color}`}>
-              <Icon size={20} />
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${section.color}`}>
+              <section.icon size={20} />
             </div>
             <h3 className="font-semibold text-gray-900 mb-1 group-hover:text-purple-700 transition-colors">
-              {label}
+              {section.label}
             </h3>
-            <p className="text-gray-500 text-xs leading-relaxed">{desc}</p>
+            <p className="text-gray-500 text-xs leading-relaxed">{section.desc}</p>
           </Link>
         ))}
       </div>

@@ -2,7 +2,7 @@ import { useContent } from "../../context/ContentContext";
 
 export default function WhoWeAre() {
   const { content } = useContent();
-  const { heading, paragraph1, paragraph2, images } = content.about.whoWeAre;
+  const { paragraph1, paragraph2, images } = content.about.whoWeAre;
 
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 py-16 md:py-28 px-5 md:px-6">

@@ -14,7 +14,7 @@ export default function AboutSection() {
           <span className="inline-block bg-purple-50 text-purple-700 border border-purple-200 px-5 py-2 rounded-full text-sm font-semibold">
             {badge}
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">{heading}</h2>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">{heading}</h1>
           <p className="text-gray-600 text-base md:text-lg lg:text-xl max-w-xl leading-relaxed">{description}</p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 pt-2">
             <Link to="/contact" className="bg-indigo-600 text-white px-6 md:px-10 py-3 md:py-4 rounded-full font-semibold hover:bg-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105 text-center">{primaryCTA}</Link>

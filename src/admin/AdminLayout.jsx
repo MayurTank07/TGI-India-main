@@ -3,6 +3,7 @@ import {
   LayoutDashboard, Navigation, AlignJustify, Home, Info,
   MessageSquare, Phone, Briefcase, Users, LogOut, Inbox, KeyRound
 } from "lucide-react";
+import SEO from "../components/SEO";
 
 const navItems = [
   { label: "Dashboard", path: "/admin/dashboard", icon: LayoutDashboard },
@@ -29,6 +30,7 @@ export default function AdminLayout() {
 
   return (
     <div className="flex h-screen bg-gray-100 overflow-hidden">
+      <SEO title="Admin Dashboard" canonical="/admin" noindex />
 
       {/* Sidebar */}
       <aside className="w-64 bg-[#17021d] text-white flex flex-col flex-shrink-0">
@@ -46,10 +48,10 @@ export default function AdminLayout() {
 
         {/* Nav */}
         <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-          {navItems.map(({ label, path, icon: Icon }) => (
+          {navItems.map((item) => (
             <NavLink
-              key={path}
-              to={path}
+              key={item.path}
+              to={item.path}
               className={({ isActive }) =>
                 `flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition ${
                   isActive
@@ -58,8 +60,8 @@ export default function AdminLayout() {
                 }`
               }
             >
-              <Icon size={17} />
-              {label}
+              <item.icon size={17} />
+              {item.label}
             </NavLink>
           ))}
         </nav>

@@ -4,7 +4,7 @@ import { useContent } from "../../context/ContentContext";
 
 export default function TestimonialsSection() {
   const { content } = useContent();
-  const { heading, subheading, items } = content.testimonials.growingTeams;
+  const { subheading, items } = content.testimonials.growingTeams;
 
   const [current, setCurrent] = useState(0);
   const t = items[current] || {};

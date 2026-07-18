@@ -12,21 +12,22 @@ const nonITSchema = {
   "@type": "Service",
   "name": "Non-IT Recruitment Services in Mumbai",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Talent Group of India",
     "url": "https://www.talentgroupofindia.com"
   },
-  "areaServed": { "@type": "City", "name": "Mumbai" },
-  "description": "Non-IT recruitment agency in Mumbai hiring sales, marketing, operations, HR, and admin professionals for leading companies across industries.",
-  "url": "https://www.talentgroupofindia.com/services/non-it"
+  "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
+  "description": "Non-IT recruitment support for sales, marketing, operations, HR, administration, and business support roles.",
+  "url": "https://www.talentgroupofindia.com/services/non-it",
+  "serviceType": ["non-IT recruitment company", "sales hiring", "operations hiring", "HR hiring"]
 };
 
 export default function NonITPage() {
   return (
     <>
       <SEO
-        title="Non-IT Recruitment Agency in Mumbai | Sales, Marketing & Operations Hiring"
-        description="Talent Group of India recruits top non-IT professionals in Mumbai — sales managers, marketing executives, operations staff, HR personnel, and admin teams. Industry-focused, fast turnaround. Contact us today."
+        title="Non-IT Recruitment Company in Mumbai"
+        description="Recruit sales, marketing, operations, HR and administration professionals with Talent Group of India's non-IT recruitment services across India."
         canonical="/services/non-it"
         schema={nonITSchema}
       />

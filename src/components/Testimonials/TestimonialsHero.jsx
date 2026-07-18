@@ -4,7 +4,7 @@ import { useContent } from "../../context/ContentContext";
 
 export default function TestimonialsHero() {
   const { content } = useContent();
-  const { heading, subheading, items } = content.testimonials.employers;
+  const { subheading, items } = content.testimonials.employers;
 
   const [index, setIndex] = useState(0);
   const prev = () => setIndex(index === 0 ? items.length - 1 : index - 1);
@@ -20,11 +20,11 @@ export default function TestimonialsHero() {
           <span className="px-4 py-1 border border-purple-500 text-purple-600 rounded-full text-sm font-medium">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mt-4 md:mt-6 mb-4 md:mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight mt-4 md:mt-6 mb-4 md:mb-6">
             <span className="text-purple-600">What</span> our Employers
             <br />and Hiring Managers
             <br />are saying ?
-          </h2>
+          </h1>
           <p className="text-gray-600 max-w-md text-base md:text-lg">{subheading}</p>
         </div>
 
@@ -34,7 +34,7 @@ export default function TestimonialsHero() {
             <div className="text-5xl md:text-7xl font-bold opacity-90 mb-4 md:mb-6">"</div>
             <p className="text-base md:text-lg leading-relaxed mb-8 md:mb-12 opacity-95">{t.text}</p>
             <div className="flex items-center gap-3 md:gap-4">
-              <img src={t.image} alt={t.name} className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/30" />
+              {t.image && <img src={t.image} alt={t.name} className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-white/30" />}
               <div>
                 <p className="font-semibold text-base md:text-xl">{t.name}</p>
                 <p className="text-xs md:text-sm opacity-80">{t.role}</p>

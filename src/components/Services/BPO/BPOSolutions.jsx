@@ -2,7 +2,7 @@ import { useContent } from "../../../context/ContentContext";
 
 export default function BPOSolutions() {
   const { content } = useContent();
-  const { heading, description, items } = content.services.bpo.offerings;
+  const { description, items } = content.services.bpo.offerings;
 
   return (
     <div className="bg-[#F5F5F7]">

@@ -13,22 +13,22 @@ const itSchema = {
   "@type": "Service",
   "name": "IT Recruitment Services in Mumbai",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Talent Group of India",
     "url": "https://www.talentgroupofindia.com"
   },
-  "areaServed": { "@type": "City", "name": "Mumbai" },
-  "description": "Expert IT recruitment services in Mumbai. We source top software developers, cloud engineers, DevOps specialists, IT support, and infrastructure professionals for leading tech companies.",
+  "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
+  "description": "IT recruitment services for software developers, cloud engineers, DevOps specialists, IT support, and infrastructure professionals.",
   "url": "https://www.talentgroupofindia.com/services/it",
-  "serviceType": ["IT Recruitment", "Tech Staffing", "Software Developer Hiring"]
+  "serviceType": ["IT recruitment company", "tech staffing", "software developer hiring"]
 };
 
 export default function ITPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <SEO
-        title="IT Recruitment Agency in Mumbai | Software Developer & Tech Talent Hiring"
-        description="Mumbai's top IT recruitment agency. Talent Group of India sources skilled software developers, cloud engineers, DevOps, cybersecurity & IT support professionals. Fast, quality tech hiring. Contact us today."
+        title="IT Recruitment Company in Mumbai"
+        description="Hire software developers, cloud engineers, DevOps, cybersecurity and IT support professionals with Talent Group of India's IT recruitment services."
         canonical="/services/it"
         schema={itSchema}
       />

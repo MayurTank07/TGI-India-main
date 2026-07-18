@@ -22,13 +22,8 @@ const homeSchema = {
         "@type": "ImageObject",
         "url": "https://www.talentgroupofindia.com/favicon.svg"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-XXXXXXXXXX",
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
-      },
+      "email": "info@talentgroupofindia.com",
+      "telephone": "+91 98765 43210",
       "sameAs": [
         "https://www.facebook.com/talentgroupofindia",
         "https://twitter.com/talentgroupofindia",
@@ -37,38 +32,22 @@ const homeSchema = {
       ]
     },
     {
-      "@type": "LocalBusiness",
-      "@id": "https://www.talentgroupofindia.com/#localbusiness",
+      "@type": "ProfessionalService",
+      "@id": "https://www.talentgroupofindia.com/#professionalservice",
       "name": "Talent Group of India",
       "image": "https://www.talentgroupofindia.com/og-image.jpg",
-      "description": "Mumbai's leading HR recruitment and staffing agency specializing in IT, BPO, Non-IT, Accounting, Healthcare, and Corporate hiring. 10+ years of excellence, 60,000+ placements, 950+ clients.",
+      "description": "A recruitment and staffing company specializing in IT, BPO, Non-IT, Accounting, Healthcare, and Corporate hiring across India.",
       "url": "https://www.talentgroupofindia.com",
-      "telephone": "+91-XXXXXXXXXX",
+      "telephone": "+91 98765 43210",
+      "email": "info@talentgroupofindia.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Mumbai",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
-        "postalCode": "400001",
         "addressCountry": "IN"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 19.0760,
-        "longitude": 72.8777
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": "200"
-      },
+      "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "HR Recruitment & Staffing Services",
@@ -88,11 +67,7 @@ const homeSchema = {
       "url": "https://www.talentgroupofindia.com",
       "name": "Talent Group of India",
       "publisher": { "@id": "https://www.talentgroupofindia.com/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.talentgroupofindia.com/contact?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "inLanguage": "en-IN"
     }
   ]
 };
@@ -101,8 +76,8 @@ export default function HomePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <SEO
-        title="HR Recruitment & Staffing Agency in Mumbai"
-        description="Talent Group of India is Mumbai's #1 HR recruitment and staffing agency. We specialize in IT, BPO, Non-IT, Finance, Healthcare & Corporate hiring. 10+ years | 60,000+ placements | 950+ clients. Get top talent today."
+        title="Best Recruiting Company in India"
+        description="Talent Group of India is a leading recruitment and staffing company helping businesses hire skilled professionals across Mumbai, Bangalore, Gujarat and India."
         canonical="/"
         schema={homeSchema}
       />

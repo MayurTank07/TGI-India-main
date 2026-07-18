@@ -21,11 +21,15 @@ export default function TeamSection() {
         <div className="grid md:grid-cols-4 gap-10">
           {members.map((member, index) => (
             <div key={index}>
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-full h-[320px] object-cover rounded-[26px] mb-4"
-              />
+              {member.img ? (
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-[320px] object-cover rounded-[26px] mb-4"
+                />
+              ) : (
+                <div className="w-full h-[320px] rounded-[26px] mb-4 bg-gradient-to-br from-purple-100 to-indigo-100" />
+              )}
               <h3 className="text-xl font-semibold">{member.name}</h3>
               <p className="text-gray-600 text-sm mb-4">{member.role}</p>
               <div className="flex gap-3">

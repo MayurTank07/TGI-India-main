@@ -131,6 +131,7 @@ export function ImageUpload({ value, onChange, label = "Image" }) {
       {mode === "url" ? (
         <input
           type="text"
+          aria-label={`${label} URL`}
           value={value?.startsWith("data:") ? "" : (value || "")}
           onChange={(e) => onChange(e.target.value)}
           placeholder="https://images.unsplash.com/..."
@@ -145,7 +146,7 @@ export function ImageUpload({ value, onChange, label = "Image" }) {
         </div>
       )}
 
-      <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={handleFile} />
+      <input ref={fileRef} type="file" accept="image/*" aria-label={label} className="hidden" onChange={handleFile} />
 
       {value && (
         <div className="mt-2">

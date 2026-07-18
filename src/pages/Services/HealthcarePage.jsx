@@ -10,23 +10,24 @@ import Footer from "../../components/Footer/Footer";
 const healthcareSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Healthcare Staffing Agency in Mumbai",
+  "name": "Healthcare Recruitment Company in Mumbai",
   "provider": {
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "Talent Group of India",
     "url": "https://www.talentgroupofindia.com"
   },
-  "areaServed": { "@type": "City", "name": "Mumbai" },
-  "description": "Healthcare staffing and medical recruitment agency in Mumbai. We place nurses, doctors, medical billing professionals, hospital administrators and allied health staff.",
-  "url": "https://www.talentgroupofindia.com/services/healthcare"
+  "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
+  "description": "Healthcare recruitment and staffing support for nurses, doctors, medical billing professionals, hospital administrators and allied health staff.",
+  "url": "https://www.talentgroupofindia.com/services/healthcare",
+  "serviceType": ["healthcare recruitment company", "medical staffing", "hospital hiring"]
 };
 
 export default function HealthcarePage() {
   return (
     <>
       <SEO
-        title="Healthcare Staffing Agency in Mumbai | Medical & Hospital Recruitment"
-        description="Talent Group of India is Mumbai's trusted healthcare staffing agency. We recruit nurses, doctors, medical billing professionals, hospital administrators and allied health staff for hospitals and clinics. Contact us today."
+        title="Healthcare Recruitment Company in Mumbai"
+        description="Hire nurses, doctors, medical billing professionals, hospital administrators and allied health staff with healthcare recruitment support from Talent Group of India."
         canonical="/services/healthcare"
         schema={healthcareSchema}
       />
