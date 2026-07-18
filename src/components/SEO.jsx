@@ -25,7 +25,9 @@ export default function SEO({
   schema,
   noindex = false,
 }) {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : `Best Recruiting Company in India | ${SITE_NAME}`;
+  const fullTitle = title
+    ? title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
+    : `Talent Group of India: HR Recruitment & Staffing Company in India`;
   const metaDescription = description || DEFAULT_DESCRIPTION;
   const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
 

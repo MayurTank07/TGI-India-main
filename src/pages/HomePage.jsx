@@ -76,8 +76,8 @@ export default function HomePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <SEO
-        title="Best Recruiting Company in India"
-        description="Talent Group of India is a leading recruitment and staffing company helping businesses hire skilled professionals across Mumbai, Bangalore, Gujarat and India."
+        title="Talent Group of India: HR Recruitment & Staffing Company in India"
+        description="Talent Group of India is a leading HR recruitment and staffing company helping businesses hire skilled professionals across Mumbai, Bangalore, Gujarat and India."
         canonical="/"
         schema={homeSchema}
       />
