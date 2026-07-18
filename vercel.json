@@ -30,6 +30,16 @@
   ],
   "redirects": [
     {
+      "source": "/service",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service/(.*)",
+      "destination": "/services/$1",
+      "permanent": true
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
