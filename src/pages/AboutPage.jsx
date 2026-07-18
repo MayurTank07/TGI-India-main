@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { ROUTE_SEO } from "../seo/metadata";
 
 import AboutSection from "../components/About/AboutUs";
 import WhoWeAre from "../components/About/WhoWeAre";
@@ -27,12 +28,7 @@ const aboutSchema = {
 export default function AboutPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="About Us | HR Recruitment Company in Mumbai"
-        description="Learn how Talent Group of India supports recruitment, staffing and manpower hiring for IT, BPO, Finance, Healthcare, Non-IT and corporate roles across India."
-        canonical="/about"
-        schema={aboutSchema}
-      />
+      <SEO {...ROUTE_SEO['/about']} schema={aboutSchema} />
       <AboutSection />
       <WhoWeAre />
       <JourneySection />

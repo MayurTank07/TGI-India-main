@@ -19,12 +19,68 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/services/corperate",
+      "destination": "/services/corporate",
+      "permanent": true
+    }
+  ],
   "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/services/it",
+      "destination": "/services/it.html"
+    },
+    {
+      "source": "/services/bpo",
+      "destination": "/services/bpo.html"
+    },
+    {
+      "source": "/services/non-it",
+      "destination": "/services/non-it.html"
+    },
+    {
+      "source": "/services/accounting",
+      "destination": "/services/accounting.html"
+    },
+    {
+      "source": "/services/healthcare",
+      "destination": "/services/healthcare.html"
+    },
+    {
+      "source": "/services/corporate",
+      "destination": "/services/corporate.html"
+    },
+    {
+      "source": "/our-clients",
+      "destination": "/our-clients.html"
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/testimonials.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/404",
+      "destination": "/404.html"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
+  "trailingSlash": false,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite"

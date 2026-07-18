@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../../components/SEO";
+import { ROUTE_SEO } from "../../seo/metadata";
 
 import BPOHero from "../../components/Services/BPO/BPOHero";
 import BPOSolutions from "../../components/Services/BPO/BPOSolutions";
@@ -25,12 +26,7 @@ const bpoSchema = {
 export default function BPOPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="BPO Recruitment & Staffing Company in Mumbai"
-        description="Build BPO and customer support teams with recruitment for call center agents, telecallers, customer service executives and back-office professionals."
-        canonical="/services/bpo"
-        schema={bpoSchema}
-      />
+      <SEO {...ROUTE_SEO['/services/bpo']} schema={bpoSchema} />
       <BPOHero />
       <BPOSolutions />
       <WhyChooseHR />

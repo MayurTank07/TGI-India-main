@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import SEO from "../components/SEO";
+import { ROUTE_SEO } from "../seo/metadata";
 import { 
   Code, 
   Headphones, 
@@ -72,12 +73,7 @@ export default function ServicesPage() {
 
   return (
     <>
-      <SEO
-        title="Recruitment & Staffing Services in India"
-        description="Explore HR recruitment services for IT, BPO, Non-IT, Accounting, Healthcare and Corporate hiring across Mumbai, Bangalore, Gujarat and India."
-        canonical="/services"
-        schema={servicesSchema}
-      />
+      <SEO {...ROUTE_SEO['/services']} schema={servicesSchema} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-700 via-purple-700 to-purple-900 py-16 md:py-28 px-5 md:px-6 text-white">
         <div className="max-w-7xl mx-auto text-center">

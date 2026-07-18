@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../../components/SEO";
+import { ROUTE_SEO } from "../../seo/metadata";
 
 import AccountingHero from "../../components/Services/Accouting/AccountingHero";
 import AccountingTalent from "../../components/Services/Accouting/AccountingTalent";
@@ -25,12 +26,7 @@ const accountingSchema = {
 export default function AccountingPage() {
   return (
     <>
-      <SEO
-        title="Finance Recruitment Company in Mumbai"
-        description="Hire chartered accountants, financial analysts, CFOs, auditors and accounts executives with Talent Group of India's finance recruitment services."
-        canonical="/services/accounting"
-        schema={accountingSchema}
-      />
+      <SEO {...ROUTE_SEO['/services/accounting']} schema={accountingSchema} />
       <AccountingHero />
       <AccountingTalent />
       <WhyChooseAccounting />

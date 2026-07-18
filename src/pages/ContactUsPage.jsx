@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { ROUTE_SEO } from "../seo/metadata";
 import ContactSection from "../components/ContactUs/ContactSection";
 import Footer from "../components/Footer/Footer";
 
@@ -13,8 +14,8 @@ const contactSchema = {
     "@type": "ProfessionalService",
     "name": "Talent Group of India",
     "url": "https://www.talentgroupofindia.com",
-    "email": "info@talentgroupofindia.com",
-    "telephone": "+91 98765 43210",
+    "email": "contact@talentgroupofindia.com",
+    "telephone": "+91 97022 06887",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Mumbai",
@@ -27,12 +28,7 @@ const contactSchema = {
 export default function ContactUsPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="Contact HR Recruitment Company in Mumbai"
-        description="Contact Talent Group of India for HR recruitment, staffing, manpower hiring and job placement support across Mumbai, Bangalore, Gujarat and India."
-        canonical="/contact"
-        schema={contactSchema}
-      />
+      <SEO {...ROUTE_SEO['/contact']} schema={contactSchema} />
       <ContactSection />
       <Footer />
     </div>

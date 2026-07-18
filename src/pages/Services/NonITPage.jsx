@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../../components/SEO";
+import { ROUTE_SEO } from "../../seo/metadata";
 
 import NonITHero from "../../components/Services/NonIt/NonITHero";
 import NonITHiring from "../../components/Services/NonIt/NonITHiring";
@@ -25,12 +26,7 @@ const nonITSchema = {
 export default function NonITPage() {
   return (
     <>
-      <SEO
-        title="Non-IT Recruitment Company in Mumbai"
-        description="Recruit sales, marketing, operations, HR and administration professionals with Talent Group of India's non-IT recruitment services across India."
-        canonical="/services/non-it"
-        schema={nonITSchema}
-      />
+      <SEO {...ROUTE_SEO['/services/non-it']} schema={nonITSchema} />
       <NonITHero />
       <NonITHiring />
       <WhyChooseNonIT />

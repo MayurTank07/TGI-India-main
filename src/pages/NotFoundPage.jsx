@@ -1,16 +1,12 @@
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO";
 import Footer from "../components/Footer/Footer";
+import { ROUTE_SEO } from "../seo/metadata";
 
 export default function NotFoundPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="Page Not Found"
-        description="The page you are looking for could not be found on Talent Group of India."
-        canonical="/404"
-        noindex
-      />
+      <SEO {...ROUTE_SEO['/404']} />
       <section className="py-20 md:py-32 px-5 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-sm font-semibold text-purple-700 mb-3">404</p>

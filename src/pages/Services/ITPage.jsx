@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../../components/SEO";
+import { ROUTE_SEO } from "../../seo/metadata";
 
 import ITServicesHero from "../../components/Services/IT/ITServicesHero";
 import WhatWeOffer from "../../components/Services/IT/WhatWeOffer";
@@ -26,12 +27,7 @@ const itSchema = {
 export default function ITPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="IT Recruitment Company in Mumbai"
-        description="Hire software developers, cloud engineers, DevOps, cybersecurity and IT support professionals with Talent Group of India's IT recruitment services."
-        canonical="/services/it"
-        schema={itSchema}
-      />
+      <SEO {...ROUTE_SEO['/services/it']} schema={itSchema} />
       <ITServicesHero />
       <WhatWeOffer />
       <ITHiringProcess />

@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { DEFAULT_IMAGE, ROUTE_SEO } from "../seo/metadata";
 
 import Home from "../components/Home/Home";
 import Services from "../components/Home/Services";
@@ -22,8 +23,8 @@ const homeSchema = {
         "@type": "ImageObject",
         "url": "https://www.talentgroupofindia.com/favicon.svg"
       },
-      "email": "info@talentgroupofindia.com",
-      "telephone": "+91 98765 43210",
+      "email": "contact@talentgroupofindia.com",
+      "telephone": "+91 97022 06887",
       "sameAs": [
         "https://www.facebook.com/talentgroupofindia",
         "https://twitter.com/talentgroupofindia",
@@ -35,11 +36,11 @@ const homeSchema = {
       "@type": "ProfessionalService",
       "@id": "https://www.talentgroupofindia.com/#professionalservice",
       "name": "Talent Group of India",
-      "image": "https://www.talentgroupofindia.com/og-image.jpg",
+      "image": DEFAULT_IMAGE,
       "description": "A recruitment and staffing company specializing in IT, BPO, Non-IT, Accounting, Healthcare, and Corporate hiring across India.",
       "url": "https://www.talentgroupofindia.com",
-      "telephone": "+91 98765 43210",
-      "email": "info@talentgroupofindia.com",
+      "telephone": "+91 97022 06887",
+      "email": "contact@talentgroupofindia.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -75,12 +76,7 @@ const homeSchema = {
 export default function HomePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="Talent Group of India: HR Recruitment & Staffing Company in India"
-        description="Talent Group of India is a leading HR recruitment and staffing company helping businesses hire skilled professionals across Mumbai, Bangalore, Gujarat and India."
-        canonical="/"
-        schema={homeSchema}
-      />
+      <SEO {...ROUTE_SEO['/']} schema={homeSchema} />
       <Home />
       <Services />
       <Approach />

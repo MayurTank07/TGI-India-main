@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../../components/SEO";
+import { ROUTE_SEO } from "../../seo/metadata";
 
 import CorperateHero from "../../components/Services/CorperateHiring/CorperateHero";
 import SolutionsSection from "../../components/Services/CorperateHiring/SolutionSection";
@@ -26,12 +27,7 @@ const corporateSchema = {
 export default function CorporatePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="Corporate Hiring Company in Mumbai"
-        description="Recruit leaders, managers and specialist professionals with corporate hiring and executive search support from Talent Group of India."
-        canonical="/services/corporate"
-        schema={corporateSchema}
-      />
+      <SEO {...ROUTE_SEO['/services/corporate']} schema={corporateSchema} />
       <CorperateHero />
       <SolutionsSection />
       <ProcessSection />

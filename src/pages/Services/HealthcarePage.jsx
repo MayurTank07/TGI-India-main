@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../../components/SEO";
+import { ROUTE_SEO } from "../../seo/metadata";
 
 import HealthcareHero from "../../components/Services/Healthcare/HealthcareHero";
 import HealthcareOffer from "../../components/Services/Healthcare/HealthcareOffer";
@@ -25,12 +26,7 @@ const healthcareSchema = {
 export default function HealthcarePage() {
   return (
     <>
-      <SEO
-        title="Healthcare Recruitment Company in Mumbai"
-        description="Hire nurses, doctors, medical billing professionals, hospital administrators and allied health staff with healthcare recruitment support from Talent Group of India."
-        canonical="/services/healthcare"
-        schema={healthcareSchema}
-      />
+      <SEO {...ROUTE_SEO['/services/healthcare']} schema={healthcareSchema} />
       <HealthcareHero />
       <HealthcareOffer />
       <WhyChooseHealthcare />

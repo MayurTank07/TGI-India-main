@@ -1,5 +1,6 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { ROUTE_SEO } from "../seo/metadata";
 import TestimonialsHero from "../components/Testimonials/TestimonialsHero";
 import TestimonialsJob from "../components/Testimonials/TestimonialsJob";
 import TestimonialsSection from "../components/Testimonials/TestimonialsSection";
@@ -16,12 +17,7 @@ const testimonialsSchema = {
 export default function TestimonialsPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <SEO
-        title="Recruitment Testimonials from Employers & Job Seekers"
-        description="Read testimonials from employers and job seekers who trusted Talent Group of India for HR recruitment, staffing and career placement support in India."
-        canonical="/testimonials"
-        schema={testimonialsSchema}
-      />
+      <SEO {...ROUTE_SEO['/testimonials']} schema={testimonialsSchema} />
       <TestimonialsHero />
       <TestimonialsJob />
       <TestimonialsSection />
