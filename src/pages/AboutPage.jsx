@@ -19,7 +19,6 @@ const aboutSchema = {
   "mainEntity": {
     "@type": "Organization",
     "name": "Talent Group of India",
-    "foundingDate": "2012",
     "url": "https://www.talentgroupofindia.com",
     "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"]
   }

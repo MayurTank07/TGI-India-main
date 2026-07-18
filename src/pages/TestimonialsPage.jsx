@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer";
 
 const testimonialsSchema = {
   "@context": "https://schema.org",
-  "@type": "ItemList",
+  "@type": "CollectionPage",
   "name": "Client Testimonials — Talent Group of India",
   "description": "Testimonials from employers and job seekers who worked with Talent Group of India for recruitment and career placement support.",
   "url": "https://www.talentgroupofindia.com/testimonials"

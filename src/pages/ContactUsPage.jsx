@@ -20,6 +20,7 @@ const contactSchema = {
       "@type": "PostalAddress",
       "addressLocality": "Mumbai",
       "addressRegion": "Maharashtra",
+      "postalCode": "400042",
       "addressCountry": "IN"
     }
   }

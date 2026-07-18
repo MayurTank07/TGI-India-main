@@ -1,6 +1,15 @@
 {
   "headers": [
     {
+      "source": "/admin",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
       "source": "/admin/(.*)",
       "headers": [
         {
@@ -21,12 +30,80 @@
   ],
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/it.html",
+      "destination": "/services/it",
+      "permanent": true
+    },
+    {
+      "source": "/services/bpo.html",
+      "destination": "/services/bpo",
+      "permanent": true
+    },
+    {
+      "source": "/services/non-it.html",
+      "destination": "/services/non-it",
+      "permanent": true
+    },
+    {
+      "source": "/services/accounting.html",
+      "destination": "/services/accounting",
+      "permanent": true
+    },
+    {
+      "source": "/services/healthcare.html",
+      "destination": "/services/healthcare",
+      "permanent": true
+    },
+    {
+      "source": "/services/corporate.html",
+      "destination": "/services/corporate",
+      "permanent": true
+    },
+    {
+      "source": "/our-clients.html",
+      "destination": "/our-clients",
+      "permanent": true
+    },
+    {
+      "source": "/testimonials.html",
+      "destination": "/testimonials",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
       "source": "/services/corperate",
       "destination": "/services/corporate",
       "permanent": true
     }
   ],
   "rewrites": [
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": "/index.html"
+    },
     {
       "source": "/about",
       "destination": "/about.html"
@@ -74,10 +151,6 @@
     {
       "source": "/404",
       "destination": "/404.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ],
   "trailingSlash": false,

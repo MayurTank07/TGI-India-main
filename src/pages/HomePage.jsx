@@ -21,16 +21,10 @@ const homeSchema = {
       "url": "https://www.talentgroupofindia.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.talentgroupofindia.com/favicon.svg"
+        "url": "https://www.talentgroupofindia.com/favicon.png"
       },
       "email": "contact@talentgroupofindia.com",
-      "telephone": "+91 97022 06887",
-      "sameAs": [
-        "https://www.facebook.com/talentgroupofindia",
-        "https://twitter.com/talentgroupofindia",
-        "https://www.instagram.com/talentgroupofindia",
-        "https://www.linkedin.com/company/talentgroupofindia"
-      ]
+      "telephone": "+91 97022 06887"
     },
     {
       "@type": "ProfessionalService",
@@ -41,11 +35,11 @@ const homeSchema = {
       "url": "https://www.talentgroupofindia.com",
       "telephone": "+91 97022 06887",
       "email": "contact@talentgroupofindia.com",
-      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Mumbai",
         "addressRegion": "Maharashtra",
+        "postalCode": "400042",
         "addressCountry": "IN"
       },
       "areaServed": ["India", "Mumbai", "Bangalore", "Gujarat"],
